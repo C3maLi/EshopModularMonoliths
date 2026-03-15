@@ -3,8 +3,19 @@
     <Project Path="Bootstrapper/Api/Api.csproj" Id="82441f17-a8e2-4856-9ec7-b7e0ea04ba68" />
   </Folder>
   <Folder Name="/Modules/" />
-  <Folder Name="/Modules/Basket/" />
-  <Folder Name="/Modules/Catalog/" />
-  <Folder Name="/Modules/Ordering/" />
-  <Folder Name="/Shared/" />
+  <Folder Name="/Modules/Basket/">
+    <Project Path="Modules/Basket/Basket/Basket.csproj" Id="55e3063c-668f-4365-bd33-2e8f653be3f1" />
+  </Folder>
+  <Folder Name="/Modules/Catalog/">
+    <Project Path="Modules/Catalog/Catalog/Catalog.csproj" Id="3d5b041f-b2ed-452d-8e7e-7463520c7ca3" />
+  </Folder>
+  <Folder Name="/Modules/Ordering/">
+    <Project Path="Modules/Ordering/Ordering/Ordering.csproj" Id="905c4b52-f425-4bb1-8413-6e5f842b5d96" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="Shared/Shared/Shared.csproj" Id="f95b2f72-5462-4bba-a685-a199a67ba738" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
 </Solution>

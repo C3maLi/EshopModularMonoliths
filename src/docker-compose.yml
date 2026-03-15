@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  eshopdb:
+    image: postgres:17
+  api:
+    build:
+      context: Bootstrapper/Api
+      dockerfile: Dockerfile
+
+volumes:
+  postgres_eshopdb:
+    
