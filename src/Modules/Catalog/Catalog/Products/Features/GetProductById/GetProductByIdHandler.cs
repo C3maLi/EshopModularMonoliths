@@ -1,4 +1,4 @@
-﻿namespace Catalog.Products.Features.CreateProduct.GetProductById;
+﻿namespace Catalog.Products.Features.GetProductById;
 
 
 public record GetProductByIdQuery(Guid Id)

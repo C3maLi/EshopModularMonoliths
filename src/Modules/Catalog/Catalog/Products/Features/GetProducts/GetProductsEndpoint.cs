@@ -1,0 +1,27 @@
+﻿
+namespace Catalog.Products.Features.GetProducts;
+
+public record GetProductsResponse(IEnumerable<ProductDto> Product);
+
+public class GetProductsEndpoint : ICarterModule
+{
+    public void AddRoutes(IEndpointRouteBuilder app)
+    {
+        app.MapDelete("/products", async (ISender sender) =>
+        {
+
+
+            var result = await sender.Send(new GetProductsQuery());
+            var response = result.Adapt<GetProductsResponse>();
+            
+
+            return Results.Ok(response);
+        })
+            .WithName("GetProduct")
+            .Produces<GetProductsResponse>(StatusCodes.Status200OK)
+            .ProducesProblem(StatusCodes.Status400BadRequest)
+            .ProducesProblem(StatusCodes.Status404NotFound)
+            .WithSummary("Get Product")
+            .WithDescription("Get Product");
+    }
+}

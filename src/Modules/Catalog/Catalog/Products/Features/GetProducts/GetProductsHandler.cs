@@ -1,5 +1,4 @@
-﻿
-namespace Catalog.Products.Features.CreateProduct.GetProducts;
+﻿namespace Catalog.Products.Features.GetProducts;
 
 public record GetProductsQuery()
     : IQuery<GetProducstResult>;
