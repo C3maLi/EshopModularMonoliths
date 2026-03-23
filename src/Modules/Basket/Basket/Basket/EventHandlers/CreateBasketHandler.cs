@@ -1,8 +1,4 @@
-﻿using Basket.Basket.Dtos;
-using FluentValidation;
-using Shared.CQRS;
-
-namespace Basket.Basket.EventHandlers;
+﻿namespace Basket.Basket.EventHandlers;
 
 public record CreateBasketCommand(ShoppingCartDto ShoppingCart)
     : ICommand<CreateBasketResult>;

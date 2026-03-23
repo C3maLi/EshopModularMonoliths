@@ -3,6 +3,10 @@ version: '3.4'
 services:
   eshopdb:
     image: postgres:17
+
+  distributedcache:
+    image: redis
+
   api:
     build:
       context: Bootstrapper/Api
