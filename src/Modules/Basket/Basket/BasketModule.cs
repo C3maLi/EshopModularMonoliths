@@ -1,4 +1,4 @@
-﻿using Basket.Data;
+﻿using Basket.Data.Processors;
 using Basket.Data.Repsitory;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +29,7 @@ namespace Basket
                 options.UseNpgsql(connectionString);
             });
 
+            services.AddHostedService<OutboxProcessor>();
 
 
             return services;
